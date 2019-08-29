@@ -1,0 +1,32 @@
+
+var type ='请选择级别';
+var type1 = '合伙人';
+var type2 = '联创';
+var type3 = '总代';
+var daili = function (s) {
+  switch (s) {
+    case 0:
+      return type
+    break
+    case 1:
+      return type1;
+      break
+    case 2:
+      return type2;
+      break
+    case 3:
+      return type3;
+      break
+    default:
+      return type;
+      break
+  }
+}
+
+module.exports = {
+  daili: daili,
+  type: type,
+  type1: type1,
+  type1: type2,
+  type1: type3
+};

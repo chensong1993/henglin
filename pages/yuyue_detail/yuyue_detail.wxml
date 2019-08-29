@@ -1,0 +1,63 @@
+<!--pages/yuyue_detail/yuyue_detail.wxml-->
+
+<scroll-view class="yuyue_main" scroll-y="true" style="height:{{winHeight}}rpx">
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiper class='bannerH' indicator-dots="false" indicator-color="white" indicator-active-color="transparent" autoplay="true" interval="3000" duration="1000" circular='true'>
+      <block wx:for="{{1}}" wx:key=''>
+        <swiper-item>
+          <image src="../../image/banner.png" bindtap='bannerDetail' data-index="{{item}}" class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="car_type" wx:if="{{type==0}}">
+    单人套票
+  </view>
+
+ <view class="car_type" wx:if="{{type==1}}">
+    双人套票
+  </view>
+  <view class="car_content">
+
+    <view class="img_and_price" wx:if="{{type==0}}">
+      <view class="view_img">
+        <image src="/image/ic_single.png" class="img_car"></image>
+      </view>
+      <view class="yy_price" >价格：598元</view>
+    </view>
+
+ <view class="img_and_price" wx:if="{{type==1}}">
+      <view class="view_img">
+        <image src="/image/ic_double.png" class="img_car"></image>
+      </view>
+      <view class="yy_price" >价格：998元</view>
+    </view>
+
+    <view class="yy_content">
+      诊疗卡就是第一次到某个医院就医需要先在该医院的服务台或专门的窗口办理的一张可电脑读取的就诊IC卡。上面保存患者的基本信息，相当于过去的挂号证。再就诊时即可用此卡直接挂号就诊，如果有当地的医保卡可以不办理诊疗卡，直接用医保卡挂号就可以了。
+    </view>
+
+    <view class="go_yuyue" bindtap="onYuYue">
+      我要预约
+    </view>
+
+   
+
+  </view>
+</scroll-view>
+
+ <view class="tip" wx:if="{{mengceng==1}}">
+      <view class="w_img">
+        <image src="/image/warning.png" class="warning"></image>
+      </view>
+
+
+      <view class="w">
+        <view class="w_tip">需推荐人才能购买</view>
+        <view class="w_phone">400-5554-8888</view>
+      </view>
+
+    </view>
+    <view class="mengceng" wx:if='{{mengceng==1}}' bindtap="onCancelMengceng" style="height:{{winHeight}}rpx"></view>

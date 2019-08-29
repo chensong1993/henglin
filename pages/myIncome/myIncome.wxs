@@ -1,0 +1,23 @@
+var load = '加载中 . . .';
+var loadEnd = '已加载全部内容';
+
+var loading = function (s) {
+  switch (s) {
+    case 1:
+      return load;
+      break
+    case 2:
+      return loadEnd;
+      break
+    default:
+      return load;
+      break
+  }
+}
+
+module.exports = {
+  loading: loading,
+  load: load,
+  loadEnd: loadEnd,
+
+};

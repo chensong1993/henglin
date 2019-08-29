@@ -1,0 +1,36 @@
+var level1 = '';
+var level2 = '合伙人';
+var level3 = '联合创始人';
+var level4 = '总代';
+var level5 = '顶级';
+var level = function(s) {
+  switch (s) {
+    case -1:
+      return level5;
+      break;
+    case 0:
+      return level1;
+      break;
+    case 1:
+      return level2;
+      break;
+    case 2:
+      return level3;
+      break;
+    case 3:
+      return level4;
+      break;
+    default:
+      return level1;
+      break;
+  }
+}
+
+module.exports = {
+  level: level,
+  level1: level1,
+  level2: level2,
+  level3: level3,
+  level4: level4,
+  level5: level5
+};

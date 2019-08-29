@@ -1,0 +1,191 @@
+.mian {
+  margin: 0;
+  background: #f1f4f8;
+}
+
+.kongbai {
+  height: 200rpx;
+}
+
+.main_head {
+  clear: both;
+  overflow: hidden;
+  height: 300rpx;
+  width: auto;
+  background: #5bc2cb;
+  padding: 40rpx 30rpx;
+  font-size: 30rpx;
+}
+
+.img_icon {
+  height: 154rpx;
+  width: 154rpx;
+  float: left;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.img_icon1 {
+  height: 154rpx;
+  width: 154rpx;
+  float: left;
+  border-radius: 20rpx;
+}
+
+
+.mine_head {
+  float: left;
+  color: white;
+}
+
+.data_1 {
+  clear: both;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.name {
+  font-size: 40rpx;
+  float: left;
+}
+
+.name1 {
+  line-height: 154rpx;
+  font-size: 40rpx;
+  float: left;
+  text-align: center;
+  border: none;
+  color: white;
+  background: #5bc2cb;
+}
+.name1::after{
+   border: none;
+}
+.sex {
+  float: left;
+  padding: 10rpx;
+}
+
+.data_2 {
+  clear: both;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.gang {
+  float: left;
+  margin-right: 10rpx;
+}
+
+.age {
+  float: left;
+  margin-right: 10rpx;
+  padding-top: 5rpx;
+}
+
+.level {
+  float: left;
+  padding-top: 5rpx;
+}
+
+.money {
+  position: relative;
+  height: 80rpx;
+  margin: 0 20rpx;
+  top: -40rpx;
+  clear: both;
+  line-height: 80rpx;
+  overflow: hidden;
+  background: white;
+  font-size: 26rpx;
+  padding: 0 66rpx;
+  border-radius: 5rpx;
+  font-size: 30rpx;
+}
+
+.balance {
+  float: left;
+  margin-right: 40rpx;
+}
+
+.balance text, .cash_balance text {
+  color: #a0a0a0;
+}
+
+.cash_balance {
+  float: right;
+}
+
+.cash {
+  float: right;
+  width: 112rpx;
+  text-align: center;
+  color: white;
+  background: #5bc2cb;
+  border-radius: 20rpx;
+  padding: 2rpx 10rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.info_v {
+  width: 95%;
+  margin: 20rpx;
+  height: 200rpx;
+}
+
+.info_img {
+  width: 100%;
+  height: 200rpx;
+}
+
+.to_perfect {
+  position: relative;
+  width: 163rpx;
+  height: 44rpx;
+  top: -70rpx;
+  left: 30rpx;
+}
+
+.list {
+  background: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin: 20rpx;
+}
+
+.my_car {
+  height: 80rpx;
+  line-height: 80rpx;
+  clear: both;
+  overflow: hidden;
+  border-bottom: 1rpx gainsboro solid;
+}
+
+.list_img {
+  height: 40rpx;
+  width: 40rpx;
+  float: left;
+  padding-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+.list_text {
+  float: left;
+  line-height: 80rpx;
+}
+
+
+/* .list_text1 {
+  float: left;
+  line-height: 80rpx;
+  border: none;
+  background: white;
+  font-size: 32rpx;
+  padding: 0;
+
+}
+.list_text1::after{
+   border: none;
+} */

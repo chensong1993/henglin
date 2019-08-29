@@ -1,0 +1,19 @@
+<scroll-view class="main" scroll-y="true" style="height:{{winHeight}}rpx">
+  <view class="list">
+     <view class="my_car" bindtap="onRecommend">
+        <image class="list_img" src="/image/ic_share2.png"></image>
+        <button class='list_text1'  open-type="share" id="0">分享给会员</button>
+      </view>
+
+     <view class="my_car" bindtap="onRecommend" wx:if="{{level!=3}}">
+        <image class="list_img" src="/image/ic_share3.png"></image>
+        <button class='list_text1'  open-type="share" id="1">分享给下级代理</button>
+        <!-- <view class="list_text">我要推荐</view> -->
+      </view>
+     <view class="my_car" bindtap="onRecommend">
+        <image class="list_img" src="/image/ic_share1.png"></image>
+        <button class='list_text1'  open-type="share" id="2">推荐给代理</button>
+        <!-- <view class="list_text">我要推荐</view> -->
+      </view>
+  </view>
+</scroll-view>

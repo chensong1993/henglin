@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<!-- <scroll-view class="main" scroll-y="true" style="height:{{winHeight}}rpx"> -->
+<!-- 轮播图 -->
+<!-- <view class="banner">
+    <swiper class='bannerH' indicator-dots="true" indicator-color="white" indicator-active-color="#4093ff" autoplay="true" interval="3000" duration="1000" circular='true'>
+      <block wx:for="{{3}}" wx:key=''>
+        <swiper-item>
+          <image src="../../image/banner.png" bindtap='bannerDetail' class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view> -->
+
+<!-- 公告 -->
+<!-- <view class="tip_main">
+    <view class="v_laba">
+      <image class="laba" src="../../image/laba.png"></image>
+    </view>
+    <view class="tip_content">这也还是平台公告这也还是平台公告!!这也还是平台公告这也还是平台公告</view>
+  </view> -->
+
+
+<view class="main"  style="height:{{winHeight}}rpx">
+  <view class="agency_main">
+    <view class="a_name">卡类型</view>
+    <view class="a_levenl">卡号</view>
+    <view class="a_num">状态</view>
+    <view class="a_caozuo">预约</view>
+  </view>
+
+  <view class="agency_main" wx:for="{{vipList}}" wx:key>
+    <view class="a_name">{{item.productName}}</view>
+    <view class="levenl">{{item.cardNo}}</view>
+    <view class="a_num" wx:if="{{item.isEnabled==0}}">未激活</view>
+    <view class="a_num" wx:if="{{item.isEnabled==1}}">激活</view>
+
+    <view class="a_caozuo" bindtap="pickerShow" data-index="{{index}}" wx:if="{{item.appointmentTime.length>0}}">{{item.appointmentTime}}
+    </view>
+    <view class="a_caozuo" bindtap="pickerShow" data-index="{{index}}" wx:else>
+      预约时间
+    </view>
+  </view>
+
+
+
+  <!-- 底部空白 -->
+  <view class="kongbai"></view>
+</view>
+<timePicker pickerShow="{{isPickerShow}}" id="picker" wx:if="{{isPickerRender}}" bind:hidePicker="pickerHide" bind:setPickerTime="setPickerTime" config="{{pickerConfig}}"></timePicker>

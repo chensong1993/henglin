@@ -1,0 +1,25 @@
+<view class="main"  style="height:{{winHeight}}rpx">
+  <view class="agency_main">
+    <view class="a_name">姓名</view>
+    <view class="a_levenl">手机号</view>
+    <view class="a_num">金额</view>
+    <view class="a_caozuo">时间</view>
+  </view>
+
+  <view class="agency_main" wx:for="{{incomeList}}" wx:key>
+    <view class="a_name">{{item.realName}}</view>
+    <view class="levenl">{{item.phone}}</view>
+    <view class="a_num">{{item.amount}}</view>
+    <view class="a_caozuo" >{{item.createTime}}</view>
+
+    <!-- <view class="a_caozuo" bindtap="onLookCard" data-index="{{item}}">查看产品</view> -->
+  </view>
+
+
+  <!-- 加载更多动画 -->
+  <wxs src="myIncome.wxs" module="income_load"></wxs>
+  <view class='load_more' wx:if="{{LoadMores>0}}">
+    <view class='weui-loading' wx:if="{{LoadMores>0&&LoadMores!=2}}"></view>
+    {{income_load.loading(LoadMores)}}
+  </view>
+</view>

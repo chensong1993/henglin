@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<!-- <scroll-view class="main" scroll-y="true" style="height:{{winHeight}}rpx"> -->
+<view class="mian">
+  <view class="main_head" wx:if='{{isLogin==-1}}'>
+    <image class="img_icon1" src="/image/icon.png"></image>
+    <view class="mine_head">
+      <button class='name1'  bindgetuserinfo="onGotUserInfo" open-type="getUserInfo">点击登录</button>
+    </view>
+  </view>
+
+  <!-- 是否登陆 -->
+  <view wx:if='{{isLogin==1}}'>
+
+    <view class="main_head">
+      <image class="img_icon" src="{{userInfo.avatarUrl}}"></image>
+      <view class="mine_head">
+        <view class="data_1">
+          <view class="name" wx:if="{{realName==''}}">
+            {{userInfo.nickName}}
+          </view>
+           <view class="name" wx:if="{{realName!=''}}">
+            {{realName}}
+          </view>
+          <view class="sex" wx:if='{{userInfo.gender==1}}'>
+            ♂ 男
+          </view>
+          <view class="sex" wx:if='{{userInfo.gender==2}}'>
+            ♀ 女
+          </view>
+
+        </view>
+        <view class="data_2">
+          <view class="age" wx:if="{{isExecuteDirector==1}}">
+            执行董事
+          </view>
+          <view class="gang" wx:if="{{isExecuteDirector==1}}">|</view>
+          <wxs src="mine.wxs" module="mine_level"></wxs>
+          <view class="level">
+            {{mine_level.level(level)}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+
+    <view class="money">
+      <view class="balance">
+        <text>账户余额:</text> ￥{{agentAmount}}</view>
+      <view class="cash_balance">
+        <text>积分:</text> {{recommendAmount}}</view>
+      <!-- <view class="cash" bindtap="onWithdraw">提现</view> -->
+    </view>
+
+
+    <!-- <view class="info_v">
+      <image src="/image/info.png" class="info_img"></image>
+      <view class="to_perfect" bindtap="onToPerfect"></view>
+    </view> -->
+
+    <view class="list">
+     
+      <view class="my_car" bindtap="onMyVip">
+        <image class="list_img" src="/image/ic_my_vip.jpg"></image>
+        <view class="list_text">我的会员</view>
+      </view>
+      <view class="my_car" bindtap="onMyTuiJian">
+        <image class="list_img" src="/image/ic_my_recommend.jpg"></image>
+        <view class="list_text">我的推荐</view>
+      </view>
+      <view class="my_car" bindtap="onAgency">
+        <image class="list_img" src="/image/ic_my_ageny.jpg"></image>
+        <view class="list_text">我的代理</view>
+      </view>
+      <view class="my_car" bindtap="onMyIncome">
+        <image class="list_img" src="/image/xinfeng.png"></image>
+        <view class="list_text">我的收入</view>
+      </view>
+      <view class="my_car" bindtap="onCardPwd">
+        <image class="list_img" src="/image/ic_my_pwd.png"></image>
+        <view class="list_text">设置发卡密码</view>
+      </view>
+      <view class="my_car" bindtap="onShare"  wx:if="{{level!=0}}">
+        <image class="list_img" src="/image/ic_my_share.png"></image>
+        <view class="list_text">我要分享</view>
+      </view>
+
+      
+      <!-- <view class="my_car" bindtap="onFaKa">
+        <image class="list_img" src="/image/zuanshi.png"></image>
+        <view class="list_text">我要发卡</view>
+      </view> -->
+    </view>
+  </view>
+  <!-- 底部空白 -->
+  <view class="kongbai" wx:if="{{isLogin==1}}"></view>
+  </view>
+<!-- </scroll-view> -->

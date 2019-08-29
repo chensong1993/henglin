@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<!-- <scroll-view class="main" scroll-y="true" style="height:{{winHeight}}rpx"> -->
+<view class="main_view">
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiper class='bannerH' indicator-dots="true" indicator-color="white" indicator-active-color="#4093ff" autoplay="true" interval="3000" duration="1000" circular='true'>
+      <block wx:for="{{bannerList}}" wx:key=''>
+        <swiper-item>
+          <image src="{{item.url}}" bindtap='bannerDetail' data-index="{{item}}" class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 公告 -->
+  <view class="tip_main">
+    <view class="v_laba">
+      <image class="laba" src="../../image/laba.png"></image>
+    </view>
+    <view class="tip_content" >{{text}}</view>
+  </view>
+
+  <!-- <view class="v_laba">
+          <image class="laba" src="../../image/laba.png"></image>
+        </view>
+  <scroll-view class="container">
+    <view class="scrolltxt">
+      <view class="marquee_box">
+       
+        <view class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+          <text>{{text}}</text>
+          <text style="margin-right:{{marquee_margin}}px;"></text>
+          <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view> -->
+  <!-- 卡片 -->
+  <view class="list1" bindtap="onCarDetail">
+    <view class="car_view">
+      <image class="car_01" src="../../image/ic_single.png"></image>
+    </view>
+    <view class="list_content">
+      <view class="car_name">
+        单人套票
+      </view>
+      <view class="car_price">
+        价格：
+        <text class="text_price">598</text>元
+
+      </view>
+      <view class="car_presentation">
+        使用方法
+      </view>
+    </view>
+  </view>
+
+  <view class="list1" bindtap="onCarDetail1">
+    <view class="car_view">
+      <image class="car_01" src="../../image/ic_double.png"></image>
+    </view>
+    <view class="list_content">
+      <view class="car_name">
+        双人套票
+      </view>
+      <view class="car_price">
+        价格：
+        <text class="text_price">998</text>元
+
+      </view>
+      <view class="car_presentation">
+        使用方法
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="list1" bindtap="onCarDetail">
+    <view class="car_view">
+      <image class="car_01" src="../../image/yangliao.png"></image>
+    </view>
+    <view class="list_content">
+      <view class="car_name">
+        养疗卡
+      </view>
+      <view class="car_price">
+        价格：
+        <text class="text_price">5000</text>元
+
+      </view>
+      <view class="car_presentation">
+        使用方法
+      </view>
+    </view>
+  </view> -->
+
+  <!-- 底部空白 -->
+  <!-- <view class="kongbai"></view> -->
+  </view>
+<!-- </scroll-view> -->

@@ -1,0 +1,29 @@
+
+<scroll-view class="main" scroll-y="true" style="height:{{winHeight}}rpx">
+
+<view class="register_main">
+    <view class="register">
+      <image src="/image/ic_gr.png" class="register_img"></image>
+      <input class="register_input" type="text"  bindinput="inputName" placeholder="请输入姓名（必填）"></input>
+    </view>
+
+     <view class="register">
+      <image src="/image/ic_phone.png" class="register_img"></image>
+      <input class="register_input" type="number"  bindinput="inputPhone" maxlength='11' placeholder="请输入手机号（必填）"></input>
+    </view>
+
+     <view class="register" wx:if="{{isVip}}">
+      <image src="/image/ic_sex.png" class="register_img"></image>
+      <input class="register_input" type="password"  bindinput="inputPwd" placeholder="请输入密码"></input>
+    </view>
+
+     <!-- <view class="register">
+      <image src="/image/ic_suo.png" class="register_img"></image>
+      <input class="register_input" type="idcard" bindinput="inputIdcard" maxlength='18' placeholder="请输入身份证号（选填）"></input>
+    </view> -->
+
+
+    <button class='submit' bindgetuserinfo="onGotUserInfo" open-type="getUserInfo">提 交</button>
+  </view>
+</scroll-view>
+<official-account></official-account>

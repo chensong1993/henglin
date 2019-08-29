@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/product/product",
+    "pages/subscribe/subscribe",
+    "pages/mine/mine",
+    "pages/yuyue_detail/yuyue_detail",
+    "pages/register/register",
+    "pages/agency/agency",
+    "pages/my_vip/my_vip",
+    "pages/share/share",
+    "pages/cardPassword/cardPassword",
+    "pages/myRecommend/myRecommend",
+    "pages/myIncome/myIncome"
+    
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "恒麟医养",
+    "navigationBarTextStyle": "black",
+    "backgroundColor":"gray"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/product/product",
+        "text": "产品",
+        "iconPath": "image/product.png",
+        "selectedIconPath": "image/product_select.png"
+      },
+      {
+        "pagePath": "pages/subscribe/subscribe",
+        "text": "预约",
+        "iconPath": "image/yuyue.png",
+        "selectedIconPath": "image/yuyue_select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mine_select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "downloadFile": 6000
+  },
+  "cloud": true,
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

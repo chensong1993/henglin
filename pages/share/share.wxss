@@ -1,0 +1,42 @@
+
+.main{
+  margin: 0;
+  background: #f1f4f8;
+}
+.list {
+  background: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin: 20rpx;
+  
+}
+
+.my_car {
+  height: 80rpx;
+  line-height: 80rpx;
+  clear: both;
+  overflow: hidden;
+  border-bottom: 1rpx gainsboro solid;
+}
+
+.list_img {
+  height: 40rpx;
+  width: 40rpx;
+  float: left;
+  padding-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+
+.list_text1 {
+  float: left;
+  line-height: 80rpx;
+  border: none;
+  background: transparent;
+  font-size: 32rpx;
+  padding: 0;
+
+}
+.list_text1::after{
+   border: none;
+}

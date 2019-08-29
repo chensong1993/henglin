@@ -1,0 +1,40 @@
+<view class="main"  style="height:{{winHeight}}rpx">
+  <view class="agency_main">
+    <view class="a_name">姓名</view>
+    <view class="a_levenl">级别</view>
+    <view class="a_num">余额</view>
+    <view class="a_caozuo">操作</view>
+  </view>
+
+  <view class="agency_main" wx:for="{{agentList}}" wx:key>
+    <view class="a_name">{{item.realName}}</view>
+    <wxs src="agency.wxs" module="level_util"></wxs>
+    <view class="levenl">{{level_util.level(item.level)}}</view>
+    <view class="a_num">{{item.agentAmount}}</view>
+
+    <picker  bindchange="bindPickerChange" value="{{id}}" range="{{selAgentList}}">
+      <view class="a_caozuo" bindtap="onFaCard" data-index="{{index}}">
+      充值
+      </view>
+    </picker>
+
+  </view>
+
+  <!-- 加载更多动画 -->
+  <wxs src="agency.wxs" module="agency_load"></wxs>
+  <view class='load_more' wx:if="{{LoadMores>0}}">
+    <view class='weui-loading' wx:if="{{LoadMores>0&&LoadMores!=2}}"></view>
+    {{agency_load.loading(LoadMores)}}
+  </view>
+
+
+</view>
+
+<view class="list" wx:if='{{mengceng==1}}'>
+
+  <input class="list_text" type="password" focus="true" bindfocus="focusPwd" bindinput="password"  placeholder="请输入发卡密码"></input>
+
+  <view class="confirm" bindtap="onPassword">确定</view>
+</view>
+
+<view class="mengceng" wx:if='{{mengceng==1}}' bindtap="onCancelMengceng" style="height:{{winHeight}}rpx"></view>

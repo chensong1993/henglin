@@ -1,0 +1,3 @@
+<view class='load_more'>
+      <view class='weui-loading'wx:if="{{LoadMores>0}}"></view>
+</view>

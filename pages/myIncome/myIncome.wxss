@@ -1,0 +1,62 @@
+@import "../loading_more/loading_more.wxss";
+
+.main {
+  background: #f1f4f8;
+  margin: 0;
+  padding: 20rpx 0;
+}
+
+.agency_main {
+  background: white;
+  margin: 20rpx;
+  clear: both;
+  overflow: hidden;
+  color: #a0a0a0;
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+}
+
+.a_name {
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: black;
+  width: 150rpx;
+  text-align: center;
+}
+
+.a_levenl {
+  width: 200rpx;
+  text-align: center;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.levenl {
+  width: 200rpx;
+  text-align: center;
+  float: left;
+  height: 60rpx;
+  color: #65cb99;
+  line-height: 60rpx;
+}
+
+.a_num {
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 150rpx;
+  text-align: center;
+}
+
+.a_caozuo {
+  float: right;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 150rpx;
+  text-align: center;
+}
+
+

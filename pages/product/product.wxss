@@ -1,0 +1,109 @@
+.main {
+  margin: 0rpx;
+  width: 100%;
+  height: 100%;
+  background: #f1f4f8;
+}
+
+.main_view {
+  margin: 0;
+  background: #f1f4f8;
+  padding-bottom: 100rpx;
+}
+
+.kongbai {
+  height: 100rpx;
+  background: #f1f4f8;
+}
+
+.bannerH {
+  width: 100%;
+  height: 400rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.tip_main {
+  background: white;
+  clear: both;
+  overflow: hidden;
+  padding: 10rpx 20rpx;
+}
+
+.v_laba {
+  float: left;
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 25rpx;
+  background: #5bc2cb;
+  text-align: center;
+  margin-right: 20rpx;
+}
+
+.laba {
+  padding-top: 5rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.tip_content {
+  float: left;
+  width: 90%;
+  height: 50rpx;
+  line-height: 50rpx;
+  overflow: hidden; /*超出部分隐藏*/
+  white-space: nowrap; /*不换行*/
+  text-overflow: ellipsis; /*超出部分文字以...显示*/
+}
+
+/* 卡片 */
+
+.list1 {
+  margin: 20rpx;
+  background: white;
+  padding: 48rpx 26rpx;
+  clear: both;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+.car_view {
+  float: left;
+}
+
+.car_01 {
+  width: 222rpx;
+  height: 145rpx;
+}
+
+.list_content {
+  float: left;
+  margin-left: 20rpx;
+  height: 145rpx;
+  padding-top: 10rpx;
+  color: gray;
+}
+
+.car_name {
+  font-weight: bold;
+  color: black;
+}
+
+.car_price {
+  font-size: 30rpx;
+}
+
+.text_price {
+  color: #65cb99;
+}
+
+.car_presentation {
+  font-size: 30rpx;
+  width: 415rpx;
+  overflow: hidden; /*超出部分隐藏*/
+  white-space: nowrap; /*不换行*/
+  text-overflow: ellipsis; /*超出部分文字以...显示*/
+}

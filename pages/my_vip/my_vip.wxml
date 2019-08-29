@@ -1,0 +1,49 @@
+<view class="main"   style="height:{{winHeight}}rpx">
+  <view class="agency_main">
+    <view class="a_name">姓名</view>
+    <view class="a_levenl">手机号</view>
+    <view class="a_num">数量</view>
+    <view class="a_caozuo">操作</view>
+  </view>
+
+  <view class="agency_main" wx:for="{{vipList}}" wx:key>
+    <view class="a_name">{{item.realname}}</view>
+    <view class="levenl">{{item.phone}}</view>
+    <view class="a_num">{{item.cardNum}}</view>
+    <picker bindchange="bindPickerChange" value="{{id}}" range="{{productList}}">
+      <view class="a_caozuo" bindtap="onFaCard" data-index="{{index}}">
+        发卡
+      </view>
+    </picker>
+    <!-- <view class="a_caozuo" bindtap="onLookCard" data-index="{{item}}">查看产品</view> -->
+  </view>
+
+
+
+  <!-- 加载更多动画 -->
+  <wxs src="my_vip.wxs" module="vip_load"></wxs>
+  <view class='load_more' wx:if="{{LoadMores>0}}">
+    <view class='weui-loading' wx:if="{{LoadMores>0&&LoadMores!=2}}"></view>
+    {{vip_load.loading(LoadMores)}}
+  </view>
+</view>
+
+<!-- <view class="faka" wx:if="{{isLook}}" animation="{{animationData}}">
+  <view class="faka_main" wx:for="{{3}}" wx:key>
+    <view class="faka_name">姓名</view>
+    <view class="faka_caozuo" bindtap="onFaCard" data-index="{{item}}">发卡</view>
+
+  </view>
+</view> -->
+
+
+<view class="list" wx:if='{{mengceng==1}}'>
+
+  <input class="list_text" type="number" focus="true" bindfocus="focusNumber" bindinput="number"  placeholder="请输入发卡数量"></input>
+
+  <input class="list_text" type="password" focus="true" bindfocus="focusPassword" bindinput="password"  placeholder="请输入发卡密码"></input>
+
+  <view class="confirm" bindtap="onPassword">确定</view>
+</view>
+
+<view class="mengceng" wx:if='{{mengceng==1}}' bindtap="onCancelMengceng" style="height:{{winHeight}}rpx"></view>

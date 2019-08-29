@@ -1,0 +1,33 @@
+<view class="main"  style="height:{{winHeight}}rpx">
+
+  <!-- 推荐人 -->
+  <view class="main_head" wx:for="{{recommendList}}" wx:key>
+    <image class="img_icon" src="{{item.headUrl}}"></image>
+    <view class="mine_head">
+      <view class="data_1">
+        <view class="name">
+          {{item.realName}}
+        </view>
+        <view class="phone">
+          {{item.phone}}
+        </view>
+      </view>
+      <view class="data_2" >
+        <!-- <view class="level">
+          高级会员
+        </view> -->
+        <picker bindchange="bindPickerChange" value="{{id}}" range="{{array}}" wx:if="{{item.level==0}}">
+        <wxs src="myRecommend.wxs" module="type_daili"></wxs>
+          <view class="level" bindtap="onIndex" data-index="{{index}}">
+            {{type_daili.daili(item.level)}}
+          </view>
+        </picker>
+        <wxs src="myRecommend.wxs" module="type_daili"></wxs>
+         <view class="level" wx:if="{{item.level>0}}"> 
+          {{type_daili.daili(item.level)}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
